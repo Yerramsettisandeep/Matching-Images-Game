@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsWon = [];
 
     const cardArray = [
-        { name: 'card1', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card1.jpg' },
-        { name: 'card1', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card1.jpg' },
-        { name: 'card2', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card2.jpg' },
-        { name: 'card2', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card2.jpg' },
-        { name: 'card3', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card3.jpg' },
-        { name: 'card3', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card3.jpg' },
-        { name: 'card4', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card4.jpg' },
-        { name: 'card4', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card4.jpg' },
-        { name: 'card5', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card5.jpg' },
-        { name: 'card5', img: 'C:\Users\hi\Desktop\Matching image\cc-images\card5.jpg' },
+        { name: 'card1', img: 'cc-images/bird.jpg' },
+        { name: 'card1', img: 'cc-images/bird.jpg' },
+        { name: 'card2', img: 'cc-images/download.jpg' },
+        { name: 'card2', img: 'cc-images/download.jpg' },
+        { name: 'card3', img: 'cc-images/OIF.jpg' },
+        { name: 'card3', img: 'cc-images/OIF.jpg' },
+        { name: 'card4', img: 'cc-images/kd.jpg' },
+        { name: 'card4', img: 'cc-images/kd.jpg' },
+        { name: 'card5', img: 'cc-images/th.jpg' },
+        { name: 'card5', img: 'cc-images/th.jpg' }
     ];
 
     function shuffle(array) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < cardArray.length; i++) {
             const card = document.createElement('img');
-            card.setAttribute('src', 'images/blank.png');
+            card.setAttribute('src', 'cc-images/blank.png');
             card.setAttribute('data-id', i);
             card.addEventListener('click', flipCard);
             grid.appendChild(card);
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[secondCardId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen);
         } else {
-            cards[firstCardId].setAttribute('src', 'images/blank.png');
-            cards[secondCardId].setAttribute('src', 'images/blank.png');
+            cards[firstCardId].setAttribute('src', 'cc-images/blank.png');
+            cards[secondCardId].setAttribute('src', 'cc-images/blank.png');
         }
 
         cardsChosen = [];
